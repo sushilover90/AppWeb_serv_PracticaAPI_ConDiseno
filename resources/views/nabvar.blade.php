@@ -18,7 +18,11 @@
     <div class="sidebar-wrapper" id="sidebar-wrapper">
 
         <ul class="nav">
-            <p>Menú</p>
+            <p class="ml-3 text-white">Menú</p>
+
+            <li>
+                <a href="/">INICIO</a>
+            </li>
 
             <li >
                 <a href="/board">
@@ -49,6 +53,7 @@
                     @csrf
                 </form>
             </li>
+
         </ul>
     </div>
 </div>

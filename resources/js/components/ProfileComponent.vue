@@ -21,7 +21,7 @@
         <div id="champs">
             <h2 style="padding: 1em;">Campeones favoritos</h2>
             <div class="row justify-content-center">
-                <div v-for="(champ, index) in favchampsnames" :key="index" class="card mx-3" style="width: 21rem; background: rgb(10, 20, 37);">
+                <div v-for="(champ, index) in favchampsnames" :key="index" class="card mx-3" style="width: 21rem;">
                     <img :src="'/images/' + champ.name + '_0.jpg'" class="card-img-top" alt="...">
                     <div class="card-body">
                         <div class="text-center">
@@ -38,7 +38,7 @@
         </div>
         <div id="matchs" class="mt-3">
             <h2 style="padding: 1em;">Historial de partidas recientes</h2>
-            <div class="row justify-content-start my-3 p-3" style="background: rgb(10, 20, 37);" v-for="(match , index) in Matchs" :key="index">
+            <div class="row justify-content-start my-3 p-3"  v-for="(match , index) in Matchs" :key="index">
                 <div class="form-inline">
                     <img :src="'/images/littlei/' + match.champion + '_0.JPG'" class="mx-auto img-fluid img-thumbnail"
                         style="width: 5em; height: 5em;" alt="CHAMPION ICON">
@@ -120,6 +120,9 @@ export default {
                 }
                 self.favchampsnames = response.data.fav;
                 self.Matchs = response.data.matchs;
+            }).catch(function()
+            {
+                alert("HOLA");
             });
         }
     },

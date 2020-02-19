@@ -61,7 +61,8 @@
 
     <div class="main-panel" id="main-panel">
         @yield('content')
-        
+    </div>
+
 <script src="{{mix('js/app.js')}}}"></script>
 <script src="{{mix('js/ui.js')}}}"></script>
 

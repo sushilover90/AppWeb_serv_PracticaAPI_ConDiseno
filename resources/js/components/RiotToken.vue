@@ -56,7 +56,7 @@
                         'x-csrf-token' : self.csrf_token
                     }}).then(function (response){
                         self.riot_token = self.new_riot_token;
-                    $('#alert').append('<div class="alert alert-primary" role="alert">\n' +
+                    $('#alert').append('<div class="alert btn-success" role="alert">\n' +
                         'Petición exitosa' +
                         '</div>');
                 }).catch(function (response){

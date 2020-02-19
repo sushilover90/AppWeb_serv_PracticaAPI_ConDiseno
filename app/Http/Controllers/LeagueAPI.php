@@ -175,7 +175,7 @@ class LeagueAPI extends Controller
     {
         return [
             'base_url' => 'https://la1.api.riotgames.com',
-            'timeout' => 5.0,
+            'timeout' => 10.0,
             'verify' => false
         ];
     }

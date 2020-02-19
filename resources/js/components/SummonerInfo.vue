@@ -82,7 +82,7 @@ export default {
                 self.json_summoner.revisionDate=response.data.revisionDate;
                 self.json_summoner.summonerLevel=response.data.summonerLevel;
                 $('#verMasDetalles').append('<a href="/profile/'+self.json_summoner.name+'" class="mt-2 btn btn-block btn-outline-info">Ver mas detalles</a>');
-                $('#alert').append('<div class="alert alert-primary" role="alert">\n' +
+                $('#alert').append('<div class="alert btn-success" role="alert">\n' +
                 'Petición exitosa' +
                 '</div>');
             }).catch(function (response){
