@@ -1,16 +1,16 @@
 <template>
-    <div class="container">
+    <div class="container mt-3">
         <div id="banner" class="mb-5">
             <div class="row justify-content-center">
                 <div class="col-sm-3 mt-3 text-center">
                     <img :src="icon" class="rounded-circle mx-auto img-fluid img-thumbnail d-block" alt="Profile Icon" title="Avatar del Invocador"
-                    style="width: 9em; height: 9em;">
+                    style="width: 7em; height: 7em;">
                     <h3>Nivel: {{ Summoner.summonerLevel }}</h3>
                     <h1>{{ Summoner.name }}</h1>
                 </div>
                 <div class="col-sm-3 mt-3 text-center">
                     <img :src="'/images/emblems/Emblem_' +  Ranked.tier + '.png'" class="mx-auto rounded-circle img-fluid d-block"
-                    style="width: 9em; height: 9em;" alt="">
+                    style="width: 7em; height: 7em;" alt="">
                     <h3>{{ Ranked.leaguePoints }} Puntos Liga</h3>
                     <h1>{{ Ranked.tier}}</h1>
                     <p id="wl">{{ Ranked.wins }} Victorias, {{ Ranked.losses }} Derrotas</p>
@@ -19,26 +19,25 @@
         </div>
 
         <div id="champs">
-            <h2 style="padding: 1em;">Campeones favoritos</h2>
+            <h2 class="text-center" style="padding: 1em;">Campeones favoritos</h2>
             <div class="row justify-content-center">
-                <div v-for="(champ, index) in favchampsnames" :key="index" class="card mx-3" style="width: 21rem;">
+                <div v-for="(champ, index) in favchampsnames" :key="index" class="card mx-1" style="width: 15rem;">
                     <img :src="'/images/' + champ.name + '_0.jpg'" class="card-img-top" alt="...">
                     <div class="card-body">
                         <div class="text-center">
                             <h3> {{ champ.name }}</h3>
                             <h4> {{ champ.title }}</h4>
+                            <h3 class="card-title">Maestria {{ champ.championLevel }}</h3>
+                            <p> <span>{{ champ.championPoints}} </span> puntos de maestria</p>
+                            <p class="card-text">{{ champ.details }}</p>
                         </div>
-
-                        <h3 class="card-title">Maestria {{ champ.championLevel }}</h3>
-                        <p> <span>{{ champ.championPoints}} </span> puntos de maestria</p>
-                        <p class="card-text">{{ champ.details }}</p>
                     </div>
                 </div>
             </div>
         </div>
         <div id="matchs" class="mt-3">
-            <h2 style="padding: 1em;">Historial de partidas recientes</h2>
-            <div class="row justify-content-start my-3 p-3"  v-for="(match , index) in Matchs" :key="index">
+            <h2 class="text-center" style="padding: 1em;">Historial de partidas recientes</h2>
+            <div class="row justify-content-start my-3 p-3" style="background: rgb(180, 180, 180);"  v-for="(match , index) in Matchs" :key="index">
                 <div class="form-inline">
                     <img :src="'/images/littlei/' + match.champion + '_0.JPG'" class="mx-auto img-fluid img-thumbnail"
                         style="width: 5em; height: 5em;" alt="CHAMPION ICON">
@@ -132,5 +131,6 @@ export default {
 <style>
     #banner{
         background-image:url('https://nexus.leagueoflegends.com/wp-content/uploads/2019/10/Banner_Preseason-1_dwfwpnp0byzkpe2hk65v.jpg');
+        color: aliceblue;
         }
 </style>
