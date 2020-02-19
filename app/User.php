@@ -33,11 +33,21 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
 
-    //Israel
-    //Memo
-    //Edgar
+    public function Token()
+    {
+        return $this->hasMany(Token::class);
+    }
+
+    public function getTokens()
+    {
+        try{
+            return $token = Token::getUserTokens($this->id,1)[0]->key;
+        }catch (\ErrorException $e)
+        {
+            return $token[0] = 'No tienes un token riot registrado';
+        }
+
+    }
+
 }
