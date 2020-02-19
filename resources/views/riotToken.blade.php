@@ -2,6 +2,8 @@
 
 @section('content')
 
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <link rel="stylesheet" href="{{mix('css/ui.css')}}">
 
     <div class="container">
         <div class="row justify-content-center">
@@ -30,5 +32,8 @@
             </div>
         </div>
     </div>
+
+    <script src="{{mix('js/app.js')}}"></script>
+    <script src="{{mix('js/ui.js')}}"></script>
 
 @endsection

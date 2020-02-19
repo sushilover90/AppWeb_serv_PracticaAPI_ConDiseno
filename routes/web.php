@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/','HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']],function(){
 
@@ -32,7 +33,7 @@ Route::group(['middleware' => ['auth']],function(){
 Auth::routes();
 
 Route::group(['middleware'=> ['auth']],function(){
-    
+
     Route::post('/token/crear','HomeController@token');
     Route::post('/token/borrar','HomeController@borrarToken');
     Route::get('/board','HomeController@board');
@@ -42,5 +43,5 @@ Route::group(['middleware'=> ['auth']],function(){
     Route::post('/riottoken','HomeController@setRiotToken');
     Route::get('/profile/{SummonerName}','HomeController@profile');
     Route::get('/prueba/{texto}','HomeController@prueba');
-        
+
 });
