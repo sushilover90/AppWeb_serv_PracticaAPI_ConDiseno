@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
 use App\Token;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-=======
-use Illuminate\Http\Request;
->>>>>>> Anioah
 
 class HomeController extends Controller
 {
@@ -31,7 +27,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
-<<<<<<< HEAD
 
     public function token(Request $request)
     {
@@ -148,6 +143,4 @@ class HomeController extends Controller
     {
         return view('board');
     }
-=======
->>>>>>> Anioah
 }

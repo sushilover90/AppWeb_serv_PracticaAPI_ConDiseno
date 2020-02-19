@@ -5,93 +5,50 @@
             Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
         -->
 
-        <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text logo-mini">
-                CT
-            </a>
+        <div class="logo" align="center">
+            <span class="simple-text logo-mini">
+                League of Legends
+            </span>
 
-            <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-                Creative Tim
-            </a>
+            <span class="simple-text logo-normal">
+                Bienvenido
+            </span>
 
         </div>
 
         <div class="sidebar-wrapper" id="sidebar-wrapper">
 
             <ul class="nav">
-
-
-
-                <li class="active "  >
-                    <a href="./dashboard.html">
-
-                        <i class="now-ui-icons design_app"></i>
-
-                        <p>Dashboard</p>
-                    </a>
-                </li>
+                <p>Menú</p>
 
                 <li >
-                    <a href="./icons.html">
-
-                        <i class="now-ui-icons education_atom"></i>
-
-                        <p>Icons</p>
+                    <a href="/board">
+                        <p>Informacion Gral de Usuario</p>
                     </a>
                 </li>
 
                 <li >
                     <a href="./map.html">
-
-                        <i class="now-ui-icons location_map-big"></i>
-
                         <p>Maps</p>
                     </a>
                 </li>
 
                 <li >
                     <a href="./notifications.html">
-
-                        <i class="now-ui-icons ui-1_bell-53"></i>
-
                         <p>Notifications</p>
                     </a>
                 </li>
 
                 <li >
-                    <a href="./user.html">
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">
+                     {{ __('Logout') }}
+                 </a>
 
-                        <i class="now-ui-icons users_single-02"></i>
-
-                        <p>User Profile</p>
-                    </a>
-                </li>
-
-                <li >
-                    <a href="./tables.html">
-
-                        <i class="now-ui-icons design_bullet-list-67"></i>
-
-                        <p>Table List</p>
-                    </a>
-                </li>
-
-                <li >
-                    <a href="./typography.html">
-
-                        <i class="now-ui-icons text_caps-small"></i>
-
-                        <p>Typography</p>
-                    </a>
-                </li>
-
-                <li  class="active-pro" >
-                    <a href="./upgrade.html">
-
-                        <i class="now-ui-icons arrows-1_cloud-download-93"></i>
-
-                        <p>Upgrade to PRO</p>
-                    </a>
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                     @csrf
+                 </form>
                 </li>
             </ul>
         </div>
