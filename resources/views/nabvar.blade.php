@@ -26,7 +26,7 @@
 
             <li >
                 <a href="/board">
-                    <p>Informacion Gral de Usuario</p>
+                    <p>Informacion Gral del summoner</p>
                 </a>
             </li>
 
