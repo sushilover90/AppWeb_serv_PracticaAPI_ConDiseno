@@ -94,9 +94,3 @@ export default {
     }
 }
 </script>
-
-<style>
-        h1, h2, h3, h4, h5, p, span{ background: rgb(10, 20, 37);
-            border-color: rgb(182,149,41);
-            color: rgb(182,149,41); }
-</style>
