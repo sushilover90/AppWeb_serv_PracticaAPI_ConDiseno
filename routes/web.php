@@ -30,3 +30,19 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('/api_token', 'HomeController@getTokenAsync');
 
 });
+
+Auth::routes();
+
+Route::group(['middleware'=> ['auth']],function(){
+    
+    Route::post('/token/crear','HomeController@token');
+    Route::post('/token/borrar','HomeController@borrarToken');
+    Route::get('/board','HomeController@board');
+    Route::post('/summoner','LeagueAPI@getSummonerInfo');
+    Route::get('/token/get','HomeController@getToken');
+    Route::get('/riottoken','HomeController@getRiotToken');
+    Route::post('/riottoken','HomeController@setRiotToken');
+    Route::get('/profile/{SummonerName}','HomeController@profile');
+    Route::get('/prueba/{texto}','HomeController@prueba');
+        
+});
