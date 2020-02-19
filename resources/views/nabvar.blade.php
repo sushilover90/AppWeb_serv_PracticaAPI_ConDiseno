@@ -30,17 +30,49 @@
                 </a>
             </li>
 
-            <li >
-                <a href="./map.html">
-                    <p>Maps</p>
-                </a>
-            </li>
+            @if(Auth::user()->api_token ===null)
+                {{--<li >
+                    <a href="./map.html">
+                        <p>Maps</p>
+                    </a>
+                </li>
 
-            <li >
-                <a href="./notifications.html">
-                    <p>Notifications</p>
-                </a>
-            </li>
+                <li >
+                    <a href="./notifications.html">
+                        <p>Notifications</p>
+                    </a>
+                </li>--}}
+                <li>
+                    <a class="dropdown-item" href="/token/crear"
+                       onclick="event.preventDefault();
+                                document.getElementById('setToken').submit();">
+                        Crear token
+                    </a>
+
+                    <form id="setToken" action="/token/crear" method="POST">
+                        @csrf
+                    </form>
+                </li>
+            @else
+
+                <li>
+                    <a href="/token/get">
+                        <p>Ver token</p>
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item" href="/token/borrar"
+                       onclick="event.preventDefault();
+                                document.getElementById('borrarToken').submit();">
+                        Borrar Token
+                    </a>
+
+                    <form id="borrarToken" action="/token/borrar" method="POST">
+                        @csrf
+                    </form>
+                </li>
+            @endif
 
             <li >
                 <a class="dropdown-item" href="{{ route('logout') }}"
