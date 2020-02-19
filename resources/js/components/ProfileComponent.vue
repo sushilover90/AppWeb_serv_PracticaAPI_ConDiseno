@@ -129,23 +129,5 @@ export default {
 <style>
     #banner{
         background-image:url('https://nexus.leagueoflegends.com/wp-content/uploads/2019/10/Banner_Preseason-1_dwfwpnp0byzkpe2hk65v.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        background-position: center;
-    }
-    h1, h3, span {
-        color: rgb(182, 149, 41);
-        text-shadow: 2px 2px 10px rgba(244, 255, 95, 0.425);
-        border-radius: 3rem;
-    }
-    h5 {
-        color: rgb(10, 20, 37);
-        text-shadow: 0px 0px 5px rgba(255, 227, 150, 0.863);
-    }
-    #wl {
-        background: rgba(180, 173, 39, 0.445);
-        color: rgb(255, 255, 255);
-        border-radius: 5em;
-    }
+        }
 </style>
